@@ -1,3 +1,20 @@
+# Ignore virtual environment directory
+env/
+
+# Ignore test templates directory
+test templates/
+
+# Ignore original template directory
+Forum-Template-Original/
+
+# Ignore icons directory
+icons/
+
+# Other common ignores
+*.pyc
+__pycache__/
+db.sqlite3
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
