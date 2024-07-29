@@ -1,0 +1,64 @@
+
+Creating virtual envirnment
+
+python -m venv env 
+
+env\Scripts\activate
+
+pip install django
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~`2 way~~~~~~~~~~~~~~~~~
+
+pip install virtualenv
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+follow: 
+
+virtualenv -p python3 venv
+
+venv\Scripts\activate 
+.\env\Scripts\activate
+
+deactivate
+
+
+~~~~~~~~~~~~using anaconda~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+conda create -p python==3.11.9 -y 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+pip install Django==5.0.5
+
+
+pip install django-resized
+
+from django_resized import ResizedImageField
+
+pip freeze > requirements.txt
+
+
+pip install django-tinymce 
+
+pip install django-hitcount
+
+pip install django-taggit
+
+pip install Pillow
+
+manage.py makemigrations main
+manage.py migrate main
+
+
+pip install django-crispy-forms
+
+INSTALLED_APPS = (
+    ...
+    'crispy_forms',
+)
+
+setting.py >> add 
+
+CRISPY_TEMPLATE_PACK = 'bootsrtap5'
+CRISPY_TEMPLATE_PACK = 'tailwind'

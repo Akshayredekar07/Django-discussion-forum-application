@@ -1,0 +1,38 @@
+    {% extends "base.html" %}
+
+    {% block content %}
+
+    <div class="container">
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>General Information</h1>
+            </div>
+
+
+            {% for forum in forums %}
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-car center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="{{ forum.get_url }}">{{ forum.title }}</a></h4>
+                    <p>Description: {{ forum.description }}</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>{{ forum.num_posts }} Posts</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    {% if forum.last_post %}
+                        <b><a href="{{ forum.last_post.get_url }}">Last post</a></b> by <a href="">{{ forum.last_post.user.fullname | title }}</a>
+                        <br>on <small>{{ forum.last_post.date | date }}</small>
+                    {% else %}
+                        No posts yet
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+
+    
+    </div>
+
+    {% endblock content %}
